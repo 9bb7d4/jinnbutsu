@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     CharacterController cc;
-   public  float speed = 3.0f;
+   public  float speed = 4.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +33,7 @@ public class PlayerControl : MonoBehaviour
         //加入地心引力
         if (!cc.isGrounded)
         {
-            move.y = -9.8f * 100 *Time.deltaTime;
+            move.y = -9.8f * 150 *Time.deltaTime;
         }
         cc.Move (move * speed * Time.deltaTime);
 
